@@ -89,7 +89,7 @@ def main():
     pkt_1_rst = Ether(dst=victim_mac) / ARP(op=2, psrc=router_ip, pdst=victim_ip, hwsrc=router_mac, hwdst=victim_mac)
     
     ##################################################################################################################
-    # Reset #2: ARP response from Victim -> Router (reset router mac)                                                #   
+    # Reset #2: ARP response from Victim -> Router (reset victim mac)                                                #   
     ##################################################################################################################
     pkt_2_rst = Ether(dst=router_mac) / ARP(op=2, psrc=victim_ip, pdst=router_ip, hwsrc=victim_mac, hwdst=router_mac)
 
